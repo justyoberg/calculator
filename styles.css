@@ -36,6 +36,7 @@ h1 {
   border-radius: 32px;
   width: 25%;
   height: 800px;
+  padding: 35px;
 }
 
 .screen {
@@ -43,17 +44,33 @@ h1 {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(202, 202, 153);
-  border-radius: 8px;
   border: 2px solid black;
-  width: 90%;
+  border-radius: 8px;
+  width: 100%;
   height: 100px;
-  margin-top: 35px;
 }
 
-.screen-num {
-  border: 2px solid red;
+.screen-text {
   text-align: right;
-  font-size: 40px;
-  margin: 0;
-  padding: 0;
+  font-size: 50px;
+  font-family: Orbitron;
+  font-weight: 100;
+  padding-right: 8px;
+}
+
+.buttons {
+  display: flex;
+  align-self: flex-start;
+  justify-self: flex-end;
+  flex-wrap: wrap;
+
+  border-radius: 8px;
+  height: 75%;
+  width: 100%;
+  margin-top: auto;
+}
+
+.buttons > button {
+  width: 25%;
+  height: 25%;
 }
