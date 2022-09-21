@@ -75,7 +75,7 @@ function clear() {
   screen.textContent = "";
   input = "";
   total = "";
-  operator = "";
+  operator = null;
 }
 
 function addDecimal() {
@@ -93,8 +93,12 @@ function calculate() {
 }
 
 function updateScreen(value) {
+  if (value != "." && value % 1 != 0) {
+    value = parseFloat(value).toFixed(2);
+    console.log(value);
+  }
   if (value.toString().length >= 8) {
-    screen.textContent = "<" + value.toString().slice(-8);
+    screen.textContent = "< " + value.toString().slice(-8);
   } else {
     screen.textContent = value.toString();
   }
