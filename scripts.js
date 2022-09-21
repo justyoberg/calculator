@@ -97,8 +97,8 @@ function updateScreen(value) {
     value = parseFloat(value).toFixed(2);
     console.log(value);
   }
-  if (value.toString().length >= 8) {
-    screen.textContent = "< " + value.toString().slice(-8);
+  if (value.toString().length >= 12) {
+    screen.textContent = "< " + value.toString().slice(-12);
   } else {
     screen.textContent = value.toString();
   }
