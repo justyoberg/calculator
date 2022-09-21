@@ -65,6 +65,10 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
+  if (x == 0 || y == 0) {
+    clear();
+    return screen.textContent = "Nice try!";
+  }
   operator = null;
   total = parseFloat(x) / parseFloat(y);
   updateScreen(total);
