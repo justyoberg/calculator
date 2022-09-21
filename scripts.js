@@ -75,6 +75,7 @@ function clear() {
   screen.textContent = "";
   input = "";
   total = "";
+  operator = "";
 }
 
 function addDecimal() {
