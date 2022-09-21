@@ -99,7 +99,6 @@ function calculate() {
 function updateScreen(value) {
   if (value != "." && value % 1 != 0) {
     value = parseFloat(value).toFixed(4);
-    console.log(value);
   }
   if (value.toString().length >= 12) {
     screen.textContent = "< " + value.toString().slice(-12);
