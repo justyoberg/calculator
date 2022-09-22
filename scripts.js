@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll("button");
 const screen = document.querySelector(".screen-text");
 const numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const operatorList = ["+", "/", "-", "*", ".", "=", "Enter"];
+const operatorList = ["+", "/", "-", "*", ".", "=", "Enter", "c", "Backspace"];
 
 var total = "";
 var input = "";
@@ -146,7 +146,10 @@ function keyboardInputNum(key) {
 
 function keyboardInputOper(key) {
   
-  if (key === "c") return clear();
+  if (key === "Backspace" && input !== "") {
+    input = input.slice(1);
+    screen.textContent = input;
+  } else if (key === "c") return clear();
     else if (key === ".") return addDecimal();
     else if (operatorList.includes(key)) {
       
